@@ -1,15 +1,15 @@
 # pagespeed-example
 Spring boot with PageSpeed example
 
-##General info
+## General info
 This is a project to demonstrate how pagespeed works with spring boot
 
-##Technologies
+## Technologies
 * Spring boot
 * Pagespeed
 * Nginx
 
-##Setup
+## Setup
 To setup the project run:
 
 ```
