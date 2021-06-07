@@ -1,0 +1,26 @@
+version: '3'
+services:
+  lb:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "9090:9090"
+    depends_on:
+      - service1
+    networks:
+      default:
+        aliases:
+          - service1.server.test
+    restart:
+        always
+  service1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    tty:
+      true
+    restart:
+      unless-stopped
